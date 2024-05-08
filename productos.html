@@ -4,25 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Productos</title>
-    <link rel="stylesheet" href="estilos.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .formulario {
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .grupo {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <div class="formulario">
         <form action="#" method="post" id="formulario-producto">
             <div class="grupo">
-                <h1>Información del Producto</h1>
+                <label for="nombre">Nombre del Producto</label>
+                <input type="text" name="nombre" id="nombre" placeholder="Nombre del Producto" required>
             </div>
             <div class="grupo">
-                <label for="nombre">Nombre del Producto</label><br>
-                <input type="text" name="nombre" id="nombre" placeholder="Nombre del Producto" required><br>
+                <label for="descripcion">Descripción</label>
+                <textarea name="descripcion" id="descripcion" placeholder="Descripción del Producto" rows="4" required></textarea>
             </div>
             <div class="grupo">
-                <label for="descripcion">Descripción</label><br>
-                <textarea name="descripcion" id="descripcion" placeholder="Descripción del Producto" rows="4" required></textarea><br>
-            </div>
-            <div class="grupo">
-                <label for="precio">Precio</label><br>
-                <input type="number" name="precio" id="precio" placeholder="Precio del Producto" required><br>
+                <label for="precio">Precio</label>
+                <input type="number" name="precio" id="precio" placeholder="Precio del Producto" required>
             </div>
             <div class="grupo">
                 <button type="submit">Enviar</button>
@@ -30,5 +67,4 @@
         </form>
     </div>
 </body>
-<script src="script.js"></script>
 </html>
